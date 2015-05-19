@@ -22,12 +22,18 @@
 	
 	<div id="tb" style="padding:5px;height:26px">
 		<a href="javascript:launchServer()" class="easyui-linkbutton" iconCls="icon-add">添加</a>
-		<a href="javascript:refresh()" class="easyui-linkbutton" iconCls="icon-reload" plain="true" style="float:right">刷新</a>
+		<div style="display: inline-block;float:right; margin-right: 5px;">
+			<input id="chkAutoRefresh" name="chkAutoRefresh" type="checkbox" onclick='handleAutoRefresh(this);' checked>自动刷新(每15s)</input>
+			<a href="javascript:refresh()" class="easyui-linkbutton" iconCls="icon-reload" plain="true" style="float:right">刷新</a>
+		</div>
 	</div>
 	
 	<%@include file="../include/footer.jsp"%>
 </body>
 <script type="text/javascript">
+
+	var autoRefresh = chkAutoRefresh.checked;
+	if (autoRefresh) intervalID = window.setInterval(refresh, 1000 * 15);
 	$(document).ready(function() {
 		$('#servers').datagrid({
 			url : "/server/list.json",
@@ -108,11 +114,7 @@
 					var newInstall = (new Date().getTime() - row.created) <= 5*60*1000;
 					if(newInstall){
 						if (value == "OFFLINE") {
-							return text+'<img src="../../static/easyui/images/ajax-loading.gif" style="margin-left:5px;"/>';
-						}
-					}else{
-						if (value == "OFFLINE") {
-							return '<span style="color:red;">'+text+ '</span> ';
+							return '连接中<img src="../../static/easyui/images/ajax-loading.gif" style="margin-left:5px;"/>';
 						}
 					}
 					if (value == "ONLINE"){
@@ -194,6 +196,14 @@
 	
 	function refresh() {
 		$('#servers').datagrid('reload');	
+	}
+	
+	function handleAutoRefresh(element){
+		if (element.checked){
+			intervalID = window.setInterval(refresh, 1000 * 15);
+		}else{
+			if (intervalID)window.clearInterval(intervalID);
+		}
 	}
 </script>
 </html>
