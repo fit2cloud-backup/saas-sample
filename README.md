@@ -48,11 +48,11 @@ fit2cloud-java-sdk项目的开源地址 : <https://github.com/fit2cloud/fit2clou
 
 fit2cloud.properties文件中内容如下:
 
-*   webspace.restapi.endpoint=http://<YOUR_FIT2CLOUD_SERVER_URL>:6608		>>	FIT2CLOUD企业版中RESTAPI的访问地址
-*   consumer.key=<YOUR_CONSUMER_KEY>										>>	FIT2CLOUD用户的consumer key
-*   secret.key=<YOUR_SECRET_KEY>											>>	FIT2CLOUD用户的secret key, 和consumer key一起标识用户身份
-*   multi-tenants.cluster.id=<CLUSTER_ID>									>>	被管理虚机所属集群的ID
-*   multi-tenants.clusterrole.id=<CLUSTER_ROLE_ID>							>>	被管理虚机所属虚机组的ID
+*   webspace.restapi.endpoint=http://YOUR_FIT2CLOUD_SERVER_URL:6608		>>	FIT2CLOUD企业版中RESTAPI的访问地址
+*   consumer.key=YOUR_CONSUMER_KEY										>>	FIT2CLOUD用户的consumer key
+*   secret.key=YOUR_SECRET_KEY											>>	FIT2CLOUD用户的secret key, 和consumer key一起标识用户身份
+*   multi-tenants.cluster.id=CLUSTER_ID									>>	被管理虚机所属集群的ID
+*   multi-tenants.clusterrole.id=CLUSTER_ROLE_ID						>>	被管理虚机所属虚机组的ID
 
 开发者可以在FIT2CLOUD企业版数据库中获取到上述所需的信息
 
@@ -72,7 +72,7 @@ fit2cloud.properties文件中内容如下:
 
 4.  访问
 
-成功运行后, 可以在浏览器中访问http://<YOUR_SERVER_IP>:8080来操作
+成功运行后, 可以在浏览器中访问http://YOUR_SERVER_IP:8080来操作
 
 
 5. 功能介绍
