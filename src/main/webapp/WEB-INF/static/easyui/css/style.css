@@ -1,0 +1,253 @@
+*{
+	font-size:12px;
+}
+body {
+    font-family:helvetica,tahoma,verdana,sans-serif;
+    padding:20px;
+    font-size:13px;
+    margin:0;
+}
+h2 {
+    font-size:18px;
+    font-weight:bold;
+    margin:0;
+    margin-bottom:15px;
+}
+.demo-info{
+	background:#FFFEE6;
+	color:#8F5700;
+	padding:12px;
+}
+.demo-tip{
+	width:16px;
+	height:16px;
+	margin-right:8px;
+	float:left;
+}
+
+/* Ajax Loader styles */
+#loader {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: 0px;
+	top: 0px;
+	left: 0px
+}
+
+.ajax_loader {
+	background: url("../images/spinner_squares_circle.gif") no-repeat center
+		center transparent;
+	width: 100%;
+	height: 100%;
+}
+
+.blue-loader .ajax_loader {
+	background: url("../images/ajax-loader_blue.gif") no-repeat center
+		center transparent;
+}
+
+a {
+	text-decoration: none;
+}
+
+.button-link {
+	padding: 10px 15px;
+	background: #4479BA;
+	color: #FFF;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: solid 1px #20538D;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2);
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.button-link:hover {
+	background: #356094;
+	border: solid 1px #2A4E77;
+	text-decoration: none;
+}
+
+.button-link:active {
+	-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	background: #2E5481;
+	border: solid 1px #203E5F;
+}
+
+.icon-cluster{
+    background:url('../themes/icons/icon-cluster.png') no-repeat center center !important;
+}
+.icon-server{
+    background:url('../themes/icons/icon-server.png') no-repeat center center !important;
+}
+.icon-clusterrole{
+    background:url('../themes/icons/icon-clusterrole.png') no-repeat center center !important;
+}
+.icon-blank{
+	background:url('../themes/icons/blank.gif') no-repeat center center;
+}
+.icon-add{
+	background:url('../themes/icons/edit_add.png') no-repeat center center;
+}
+.icon-edit{
+	background:url('../themes/icons/pencil.png') no-repeat center center;
+}
+.icon-remove{
+	background:url('../themes/icons/edit_remove.png') no-repeat center center;
+}
+.icon-save{
+	background:url('../themes/icons/filesave.png') no-repeat center center;
+}
+.icon-cut{
+	background:url('../themes/icons/cut.png') no-repeat center center;
+}
+.icon-ok{
+	background:url('../themes/icons/ok.png') no-repeat center center;
+}
+.icon-no{
+	background:url('../themes/icons/no.png') no-repeat center center;
+}
+.icon-cancel{
+	background:url('../themes/icons/cancel.png') no-repeat center center;
+}
+.icon-reload{
+	background:url('../themes/icons/reload.png') no-repeat center center;
+}
+.icon-search{
+	background:url('../themes/icons/search.png') no-repeat center center;
+}
+.icon-print{
+	background:url('../themes/icons/print.png') no-repeat center center;
+}
+.icon-help{
+	background:url('../themes/icons/help.png') no-repeat center center;
+}
+.icon-undo{
+	background:url('../themes/icons/undo.png') no-repeat center center;
+}
+.icon-redo{
+	background:url('../themes/icons/redo.png') no-repeat center center;
+}
+.icon-back{
+	background:url('../themes/icons/back.png') no-repeat center center;
+}
+.icon-sum{
+	background:url('../themes/icons/sum.png') no-repeat center center;
+}
+.icon-tip{
+	background:url('../themes/icons/tip.png') no-repeat center center;
+}
+.icon-mini-add{
+	background:url('../themes/icons/mini_add.png') no-repeat center center;
+}
+.icon-mini-edit{
+	background:url('../themes/icons/mini_edit.png') no-repeat center center;
+}
+.icon-mini-refresh{
+	background:url('../themes/icons/mini_refresh.png') no-repeat center center;
+}
+.icon-launch{
+	background:url('../themes/icons/launch.png') no-repeat center center;
+}
+.icon-terminate{
+	background:url('../themes/icons/terminate.png') no-repeat center center;
+}
+.icon-reboot{
+	background:url('../themes/icons/reboot.png') no-repeat center center;
+}
+.icon-image{
+	background:url('../themes/icons/image.png') no-repeat center center;
+}
+.icon-copy{
+	background:url('../themes/icons/copy.png') no-repeat center center;
+}
+.icon-setting{
+	background:url('../themes/icons/setting.png') no-repeat center center;
+}
+.icon-dollar{
+	background:url('../themes/icons/dollar.png') no-repeat center center;
+}
+.icon-event{
+	background:url('../themes/icons/event.png') no-repeat center center;
+}
+.icon-work{
+	background:url('../themes/icons/work.png') no-repeat center center;
+}
+.icon-script{
+	background:url('../themes/icons/script.png') no-repeat center center;
+}
+.icon-action{
+	background:url('../themes/icons/action.png') no-repeat center center;
+}
+.icon-disk{
+	background:url('../themes/icons/disk.png') no-repeat center center;
+}
+.icon-scale{
+	background:url('../themes/icons/scale.png') no-repeat center center;
+}
+.icon-monitor{
+	background:url('../themes/icons/monitor.png') no-repeat center center;
+}
+.icon-console{
+	background:url('../themes/icons/console.png') no-repeat center center;
+}
+.icon-security{
+	background:url('../themes/icons/security.png') no-repeat center center;
+}
+.icon-handle{
+	background:url('../themes/icons/handle.png') no-repeat center center;
+}
+.icon-password{
+	background:url('../themes/icons/password.png') no-repeat center center;
+}
+.icon-alert{
+	background:url('../themes/icons/alert.png') no-repeat center center;
+}
+.icon-loadbalancer{
+	background:url('../themes/icons/loadbalancer.png') no-repeat center center;
+}
+.icon-rds{
+	background:url('../themes/icons/rds.png') no-repeat center center;
+}
+.icon-log{
+	background:url('../themes/icons/log.png') no-repeat center center;
+}
+.icon-ssh{
+	background:url('../themes/icons/ssh.png') no-repeat center center;
+}
+.icon-update{
+	background:url('../themes/icons/update.png') no-repeat center center;
+}
+.icon-user{
+	background:url('../themes/icons/user.png') no-repeat center center;
+}
+.icon-import{
+	background:url('../themes/icons/import.png') no-repeat center center;
+}
+.icon-error{
+	background:url('../themes/icons/error.png') no-repeat center center;
+}
+.icon-export{
+	background:url('../themes/icons/export.png') no-repeat center center;
+}
+.icon-delete{
+	background:url('../themes/icons/delete.png') no-repeat center center;
+}
+.icon-list{
+	background:url('../themes/icons/list.png') no-repeat center center;
+}
