@@ -9,19 +9,20 @@
 
 <body>
 	<div style="width: 100%; background-color:#2075c4; height:124px;color: #fff;">
-		<p style="text-align:center;margin-top: 0px;margin-bottom: 0px;font-size: x-large;">FIT2CLOUD SAAS化应用演示</p>
-		该演示功能如下:
+	    <br/>
+		<p style="text-align:center;margin-top: 0px;margin-bottom: 0px;font-size: x-large;">FIT2CLOUD SAAS化演示应用</p>
+		&nbsp;&nbsp;&nbsp;&nbsp;该演示内容如下:
 		<ul>
-			<li>可以列出管理的虚机</li>
-			<li>可以向管理的虚机组中添加虚机</li>
-			<li>可以将管理的虚机移除</li>
+			<li>列出每个租户的虚拟机及状态</li>
+			<li>创建租户: 调用Fit2Cloud API启动虚机,部署应用(Jenkins)</li>
+			<li>删除租户: 调用Fit2Cloud API释放虚机</li>
 		</ul>
 	</div>
 	
 	<table id="servers"></table>
 	
 	<div id="tb" style="padding:5px;height:26px">
-		<a href="javascript:launchServer()" class="easyui-linkbutton" iconCls="icon-add">添加</a>
+		<a href="javascript:launchServer()" class="easyui-linkbutton" iconCls="icon-add">创建新租户</a>
 		<div style="display: inline-block;float:right; margin-right: 5px;">
 			<input id="chkAutoRefresh" name="chkAutoRefresh" type="checkbox" onclick='handleAutoRefresh(this);' checked>自动刷新(每15s)</input>
 			<a href="javascript:refresh()" class="easyui-linkbutton" iconCls="icon-reload" plain="true" style="float:right">刷新</a>
@@ -37,7 +38,7 @@
 	$(document).ready(function() {
 		$('#servers').datagrid({
 			url : "/server/list.json",
-			title : "虚机列表",
+			title : "租户列表(每个租户一台虚机)",
 			singleSelect : true,
 			fitColumns : true,
 			method : 'get',
@@ -127,7 +128,7 @@
 				}
 			}, {
 				field : 'price',
-				title : '费用(元)',
+				title : '每小时费用(元)',
 				width:30
 			}, {
 				field : 'created',
@@ -147,7 +148,7 @@
 				title : '操作',
 				align : 'center',
 				formatter:function(value,row,rowIndex){
-					return "<a class='button-link' onclick='terminateServer(" + row.id + ")'>移除</a>  ";
+					return "<a class='button-link' onclick='terminateServer(" + row.id + ")'>删除租户</a>  ";
 				},
 				width:40
 			}] ]
@@ -155,7 +156,7 @@
 	});
 	
 	function terminateServer(serverId) {
-		$.messager.confirm('确认框', '你确定要移除这台虚机吗?',
+		$.messager.confirm('确认框', '您确定要移除这个租户吗?',
 			function(r) {
 				if (r) {
 					$.ajax({
@@ -175,7 +176,7 @@
 	}
 	
 	function launchServer() {
-		$.messager.confirm('确认框', '你确定要添加一台虚机吗?',
+		$.messager.confirm('确认框', '您确定要创建新租户吗?',
 			function(r) {
 				if (r) {
 					$.ajax({
