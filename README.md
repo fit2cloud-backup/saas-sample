@@ -1,14 +1,20 @@
-FIT2CLOUD SaaS Sample
+FIT2CLOUD SaaS管理控制台示例
 ==========
 
-该演示功能如下:
+简述
 
-*   可以列出管理的虚机
-*   可以向管理的虚机组中添加虚机
-*   可以将管理的虚机移除
+基于FIT2CLOUD REST集成API动态弹性创建虚拟机并自动部署应用，获取自动创建虚拟机信息，移除虚拟机，实现SaaS化。
+
+典型场景，比如一个大型的某行业应用平台，有客户企业注册使用后，为该客户企业自动创建一台虚拟机并部署一套专属该企业的业务系统，并计费。如电商，物流等。
+
+该演示SaaS管理控制台包含的功能, 基于FIT2CLOUD REST集成API:
+
+*   SaaS管理控制台可以列出管理的虚机
+*   SaaS管理控制台可以向管理的虚机组中添加虚机
+*   SaaS管理控制台可以将管理的虚机移除
 
 
-0.  准备工作
+一  准备工作
 
 *   安装JDK
 	
@@ -23,7 +29,7 @@ FIT2CLOUD SaaS Sample
 	source ~/.bashrc
 ```
 
-1.  开发包说明
+二  开发包说明
 
 开发SaaS Sample, 我们需要用到fit2cloud-java-sdk. 这是由FIT2CLOUD提供的java开发工具包, 通过该工具包, 开发者可以调用FIT2CLOUD对外提供的REST接口.
 
@@ -42,7 +48,7 @@ fit2cloud-java-sdk项目的开源地址 : <https://github.com/fit2cloud/fit2clou
 开发FIT2CLOUD SaaS应用之前, 请按照fit2cloud-java-sdk项目中的说明, 将其包含在自己的开发项目中.
 
 
-2.  配置文件
+三年  配置文件
 
 该SaaS Sample示例中使用到了配置文件:/opt/fit2cloud/saas/fit2cloud.properties, 开发之前请确保该文件内容的正确
 
@@ -57,34 +63,18 @@ fit2cloud.properties文件中内容如下:
 开发者可以在FIT2CLOUD企业版右上角的"API信息"中获取到上述所需的信息
 
 
-3.  运行
+四  运行
 
 在saas-sample项目的目录下, 运行命令:
 
 	mvn clean package
-	
+
 执行后, 将会在saas-sample项目目录下生成target目录. 该目录中包含了我们所需的运行文件 saas-sample.war
 
 可以使用以下命令来运行编译后的项目:
 
 	java -jar <saas-sample.war文件所属路径>/saas-sample.war
 
-
-4.  访问
+五  访问
 
 成功运行后, 可以在浏览器中访问http://YOUR_SERVER_IP:8080来操作
-
-
-5. 功能介绍
-
-*   列出管理的虚机
-
-该应用只有一个页面, 访问该应用时将会根据fit2cloud.properties中设置的参数, 列出该用户指定虚机组下所有的虚机情况
-
-*   添加虚机
-
-页面中有"添加"按钮, 点击添加按钮, 将会向FIT2CLOUD发出启动新虚机的请求, 当提示发送添加指令成功后, 用户将可以在列表中看到新添的虚机. 几分钟内, 该虚机将启动完毕
-
-*   移除虚机
-
-管理的每台虚机最后都有"移除"按钮. 点击该按钮, 将会向FIT2CLOUD发出关闭虚机的请求, 当提示发送移除指令成功后, 用户将在列表中看到该虚机处于等待关闭状态. 几分钟内, 该虚机将完全关闭
