@@ -1,4 +1,4 @@
-FIT2CLOUD SaaS管理控制台示例
+FIT2CLOUD 应用SaaS化示例
 ==========
 
 简述
