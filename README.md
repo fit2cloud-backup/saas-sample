@@ -36,7 +36,8 @@ FIT2CLOUD 应用SaaS化示例
 二  开发包说明
 
 ```shell
-开发SaaS Sample, 我们需要用到fit2cloud-java-sdk. 这是由FIT2CLOUD提供的java开发工具包, 通过该工具包, 开发者可以调用FIT2CLOUD对外提供的REST接口.
+开发SaaS Sample, 我们需要用到fit2cloud-java-sdk. 这是由FIT2CLOUD提供的java开发工具包, 通过该工具包, 开发者可以调用
+FIT2CLOUD对外提供的REST接口.
 
 目前该工具包提供的功能有以下几点:
 
