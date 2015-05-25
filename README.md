@@ -88,3 +88,8 @@ fit2cloud.properties文件中内容如下:
 ```shell
 成功运行后, 可以在浏览器中访问http://YOUR_SERVER_IP:8080来操作
 ```
+
+六 视频演示
+
+[点击这里观看SaaS化演示视频](http://f2c-saas.oss-cn-hangzhou.aliyuncs.com/SoftStoneSaaS.mp4)
+
